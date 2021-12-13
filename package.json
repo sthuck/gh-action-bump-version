@@ -15,7 +15,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "build": "tsc -p .",
+    "build": "ncc build src/index.ts -o .",
     "start": "node ./index.js",
     "test": "npm run end-to-end-test",
     "end-to-end-test": "jest --roots=tests/end-to-end --testTimeout=300000 --runInBand"
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@types/jest": "^27.0.1",
+    "@vercel/ncc": "^0.33.0",
     "dotenv": "^10.0.0",
     "execa": "^5.1.1",
     "jest": "^25.5.4",
